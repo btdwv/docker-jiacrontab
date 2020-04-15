@@ -1,3 +1,4 @@
 #!/usr/bin/with-contenv bash
 
-s6-setuidgid abc nohup /jiacrontab/jiacrontab_admin/jiacrontab_admin &> /jiacrontab/log/jiacrontab_admin.log &
+cd /jiacrontab/jiacrontab_admin
+s6-setuidgid abc nohup ./jiacrontab_admin &> ../log/jiacrontab_admin.log &

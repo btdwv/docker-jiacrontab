@@ -1,3 +1,4 @@
 #!/usr/bin/with-contenv bash
 
-nohup /jiacrontab/jiacrontabd/jiacrontabd &> /jiacrontab/log/jiacrontabd.log &
+cd /jiacrontab/jiacrontabd
+s6-setuidgid abc nohup ./jiacrontabd &> ../log/jiacrontabd.log &
