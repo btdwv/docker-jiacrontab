@@ -1,4 +1,5 @@
 FROM golang:alpine3.11 as builder
+WORKDIR /
 RUN \
     apk add -U --no-cache make git && \
     git clone https://github.com/iwannay/jiacrontab.git
