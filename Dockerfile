@@ -1,7 +1,7 @@
 FROM golang:alpine3.11 as builder
 WORKDIR /
 RUN \
-    apk add -U --no-cache make git && \
+    apk add -U --no-cache make git gcc && \
     git clone https://github.com/iwannay/jiacrontab.git
 WORKDIR /jiacrontab
 RUN make build
