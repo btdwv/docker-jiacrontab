@@ -8,7 +8,7 @@ WORKDIR /jiacrontab
 RUN make build
 
 FROM lsiobase/alpine:3.11
-COPY --from=builder /jiacrontab/build/ /
+COPY --from=builder /jiacrontab/build/* /
 
 ARG BUILD_DATE
 ARG VERSION
