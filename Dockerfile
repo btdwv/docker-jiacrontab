@@ -1,4 +1,4 @@
-FROM lsiobase/alpine:3.11
+FROM lsiobase/alpine:3.11 as builder
 #FROM golang:alpine3.11 as builder
 WORKDIR /
 RUN \
