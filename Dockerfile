@@ -20,6 +20,9 @@ ENV VERSION 2.0.5
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS 2
 
 RUN \
+mkdir -p /jiacrontab && \
+mv -f /jiacrontabd /jiacrontab/jiacrontabd && \
+mv -f /jiacrontab_admin /jiacrontab/jiacrontab_admin && \
 echo "**** install runtime packages ****" && \
 apk add -U --no-cache docker-cli tini tzdata procps python2 py2-pip && \
 echo "**** install pip packages ****" && \

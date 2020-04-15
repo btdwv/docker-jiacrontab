@@ -1,4 +1,5 @@
 #!/usr/bin/with-contenv bash
 
-mkdir /jiacrontab/log
+mkdir -p /jiacrontab
+mkdir -p /jiacrontab/log
 chown abc:abc -R /jiacrontab
