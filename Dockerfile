@@ -1,10 +1,9 @@
 FROM golang:alpine3.11 as builder
 RUN \
-    apk add -U --no-cache docker-cli make git && \
-    cd / && \
-    git clone https://github.com/iwannay/jiacrontab.git && \
-    cd /jiacrontab && \
-    make build
+    apk add -U --no-cache make git && \
+    git clone https://github.com/iwannay/jiacrontab.git
+WORKDIR /jiacrontab
+RUN make build
 
 FROM lsiobase/alpine:3.11
 COPY --from=builder /jiacrontab/build/jiacrontab /
