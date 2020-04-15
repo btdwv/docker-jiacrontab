@@ -21,7 +21,7 @@ ENV S6_BEHAVIOUR_IF_STAGE2_FAILS 2
 
 RUN \
 echo "**** install runtime packages ****" && \
-apk add -U --no-cache docker-cli tini tzdata procps && \
+apk add -U --no-cache docker-cli tini tzdata procps python2 py2-pip && \
 echo "**** install pip packages ****" && \
 pip install --no-cache-dir -U pip && \
 pip install --no-cache-dir -U requests && \
