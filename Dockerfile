@@ -1,7 +1,8 @@
-FROM golang:alpine3.11 as builder
+FROM lsiobase/alpine:3.11
+#FROM golang:alpine3.11 as builder
 WORKDIR /
 RUN \
-    apk add -U --no-cache make git libgcc libstdc++ gcc && \
+    apk add -U --no-cache git make go && \
     git clone https://github.com/iwannay/jiacrontab.git
 WORKDIR /jiacrontab
 RUN make build
